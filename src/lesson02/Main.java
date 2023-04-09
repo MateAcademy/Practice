@@ -11,6 +11,6 @@ public class Main {
         Date now = new Date(4);
 
         System.out.println(date.after(now));
-Iterable
+
     }
 }
