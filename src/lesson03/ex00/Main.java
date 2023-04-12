@@ -49,16 +49,33 @@ public class Main {
 //            e.printStackTrace();
 //        }
 
-        File file = new File("src/lesson03/ex00/file.txt");
 
-        PrintWriter printWriter = null;
-        try {
-            printWriter = new PrintWriter(file);
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-        printWriter.write("print writer is here");
-        printWriter.flush();
+
+//        File file = new File("src/lesson03/ex00/file.txt");
+//
+//        PrintWriter printWriter = null;
+//        try {
+//            printWriter = new PrintWriter(file);
+//            printWriter.write("print writer is here");
+//            printWriter.flush();
+//        } catch (FileNotFoundException e) {
+//            throw new RuntimeException(e);
+//        }
+//
+//        String separator = File.separator;
+
+
+//        try {
+//            var pathToFile = new File("src/lesson03/ex00/file.txt");
+//            var filreader = new FileReader(pathToFile);
+//            var bufferedReader = new BufferedReader(filreader);
+//
+//            //call the method multiple times
+//            bufferedReader.lines().forEach(System.out::println);
+//
+//        } catch (IOException e) {
+//
+//        }
 
     }
 }
