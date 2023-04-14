@@ -1,4 +1,4 @@
-package lesson03.ex01;
+package lesson03.ex03;
 
 /**
  * @author Serhii Klunniy
