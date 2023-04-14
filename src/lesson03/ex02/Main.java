@@ -1,6 +1,7 @@
 package lesson03.ex02;
 
 import java.io.File;
+import java.io.FileFilter;
 import java.io.FilenameFilter;
 
 /**
@@ -8,6 +9,16 @@ import java.io.FilenameFilter;
  */
 public class Main {
     public static void main(String[] args) {
+
+        //I want to take files that consist entirely of capital letters
+        FileFilter fileFilter = new FileFilter() {
+            @Override
+            public boolean accept(File pathname) {
+                return pathname.getName().equals(pathname.getName().toUpperCase());
+            }
+        };
+
+
         list();
         //listFiles();
     }
