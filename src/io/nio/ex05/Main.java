@@ -1,4 +1,4 @@
-package lesson03.ex05;
+package io.nio.ex05;
 
 import java.io.File;
 

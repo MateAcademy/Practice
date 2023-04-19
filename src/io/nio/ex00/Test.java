@@ -1,4 +1,4 @@
-package lesson03.ex00;
+package io.nio.ex00;
 
 import java.util.ArrayList;
 import java.util.List;

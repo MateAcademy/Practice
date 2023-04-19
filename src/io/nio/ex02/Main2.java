@@ -1,4 +1,4 @@
-package lesson03.ex02;
+package io.nio.ex02;
 
 import java.io.File;
 import java.io.FileFilter;

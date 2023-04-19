@@ -1,4 +1,4 @@
-package lesson03.ex04;
+package io.nio.ex04;
 
 /**
  * @author Serhii Klunniy

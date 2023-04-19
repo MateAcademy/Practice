@@ -1,4 +1,4 @@
-package lesson03.ex01;
+package io.nio.ex01;
 
 import java.io.*;
 

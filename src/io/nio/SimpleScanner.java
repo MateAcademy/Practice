@@ -1,4 +1,4 @@
-package lesson03;
+package io.nio;
 
 import java.util.Scanner;
 
