@@ -1,8 +1,4 @@
-package io.nio.ex02;
-
-import java.io.File;
-import java.io.FileFilter;
-import java.io.FilenameFilter;
+package io.io.ex02;
 
 /**
  * @author Serhii Klunniy

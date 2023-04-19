@@ -1,4 +1,4 @@
-package io.nio.ex04;
+package io.io.ex04;
 
 /**
  * @author Serhii Klunniy

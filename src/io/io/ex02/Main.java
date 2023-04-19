@@ -1,4 +1,4 @@
-package io.nio.ex02;
+package io.io.ex02;
 
 import java.io.File;
 import java.io.FileFilter;

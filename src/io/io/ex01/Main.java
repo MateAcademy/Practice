@@ -1,4 +1,4 @@
-package io.nio.ex01;
+package io.io.ex01;
 
 import java.io.*;
 

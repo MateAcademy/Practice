@@ -1,4 +1,4 @@
-package io.nio.ex05;
+package io.io.ex05;
 
 import java.io.File;
 
