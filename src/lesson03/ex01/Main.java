@@ -28,7 +28,7 @@ public class Main {
 //        try {
 //            String str = "\n Hello world";
 //
-//            fileOutputStream = new FileOutputStream("src/lesson03/ex00/file.txt", true);
+//            fileOutputStream = new FileOutputStream("src/lesson03/ex01/file.txt", true);
 //            fileOutputStream.write(str.getBytes());
 //        } catch (FileNotFoundException e) {
 //            throw new RuntimeException(e);
@@ -39,7 +39,7 @@ public class Main {
 
 //        try {
 //            FileReader fileReader = new FileReader("src/lesson03/ex01/file.txt");
-//            char[] ints = new char[31];
+//            char[] ints = new char[100];
 //            fileReader.read(ints);
 //
 //            System.out.println(ints);
@@ -55,32 +55,32 @@ public class Main {
 //        try {
 //            printWriter = new PrintWriter(file);
 //            printWriter.write("print writer is here");
-//            printWriter.flush();
+// //           printWriter.flush();
 //        } catch (FileNotFoundException e) {
 //            throw new RuntimeException(e);
 //        }
 //
 //        String separator = File.separator;
-        
-        try {
-            var pathToFile = new File("src/lesson03/ex01/file.txt");
-            var filreader = new FileReader(pathToFile);
-            var bufferedReader = new BufferedReader(filreader);
-
-            //call the method multiple times
-            bufferedReader.lines().forEach(System.out::println);
-            bufferedReader.lines().forEach(System.out::println);
-            bufferedReader.lines().forEach(System.out::println);
-
-        } catch (IOException e) {
-            System.out.println(e);
-        }
-
+//
+//        try {
+//            var pathToFile = new File("src/lesson03/ex01/file.txt");
+//            var filreader = new FileReader(pathToFile);
+//            var bufferedReader = new BufferedReader(filreader);
+//
+//            //call the method multiple times
+//            bufferedReader.lines().forEach(System.out::println);
+//            bufferedReader.lines().forEach(System.out::println);
+//            bufferedReader.lines().forEach(System.out::println);
+//
+//        } catch (IOException e) {
+//            System.out.println(e);
+//        }
+//
 //        File file = new File("");
 //
 //        String pathSeparator = File.pathSeparator;  //   ;   string
 //        char pathSeparator2 = File.separatorChar;   //    ;     char
-//        String separator = File.separator;          //    /
+////        String separator = File.separator;          //    /
 //        char pathSeparatorChar = File.pathSeparatorChar;
 //
 //        //it allows you to get a set of root directories
@@ -98,12 +98,12 @@ public class Main {
 //getting lists of files in a directory
         File file = new File("path_to_dir");
         File file3 = new File("src/lesson03/ex01/file.txt");
-//        File[] files = file.listFiles();
+        File[] files = file.listFiles();
 
         //get parent folder:
-        String parent = file3.getParent();
-        File parentFile = file3.getParentFile();
-        System.out.println(parent);  //src\lesson03\ex01
+//        String parent = file3.getParent();
+//        File parentFile = file3.getParentFile();
+//        System.out.println(parent);  //src\lesson03\ex01
 
 
 

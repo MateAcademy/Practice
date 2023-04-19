@@ -12,9 +12,9 @@ public class Test {
         for (Integer ar : list) {
             System.out.println(ar);
         }
-
-
-        int arr = (a < 5 )? 10 : 0;
+//
+//
+//        int arr = (a < 5 )? 10 : 0;
 
     }
 }

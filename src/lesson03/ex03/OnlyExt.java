@@ -1,4 +1,4 @@
-package lesson03.ex02;
+package lesson03.ex03;
 
 import java.io.File;
 import java.io.FilenameFilter;

@@ -2,50 +2,35 @@ package lesson03.ex02;
 
 import java.io.File;
 import java.io.FileFilter;
-import java.io.FilenameFilter;
+import java.nio.file.Path;
+
 
 /**
- * Вывод списка файлов. HTML в каталоге
+ * @author Serhii Klunniy
  */
 public class Main {
     public static void main(String[] args) {
 
-        //I want to take files that consist entirely of capital letters
-        FileFilter fileFilter = new FileFilter() {
-            @Override
-            public boolean accept(File pathname) {
-                return pathname.getName().equals(pathname.getName().toUpperCase());
+        FileFilter fileFilter = new PictureFilter("jpeg", "gif");
+
+        Path path = Path.of("src/lesson03/ex02/files");
+        File file = new File(path.toString());
+
+        if (file.isDirectory()) {
+            System.out.println("Directory: " + file.getName());
+
+            File[] list = file.listFiles(fileFilter);
+
+            for (int i = 0; i < list.length; i++) {
+                File file1 = new File(file + "/" + list[i]);
+                if (file1.isDirectory()) {
+                    System.out.println(list[i] + " is a directory");
+                } else {
+                    System.out.println(list[i] + " is a file");
+                }
             }
-        };
 
-
-        list();
-        //listFiles();
-    }
-
-    //return a list of strings as an array
-    private static void list() {
-        String dirname = "src/io/ex01/controller";
-        File fl = new File(dirname);
-
-        FilenameFilter only = new OnlyExt("html");
-
-        String[] s = fl.list(only);
-        for (int i = 0; i < s.length; i++) {
-            System.out.println(s[i]);
         }
-    }
 
-    //return a list of files as an array
-    private static void listFiles() {
-        String dirname = "src/io/ex01/controller";
-        File fl = new File(dirname);
-
-        FilenameFilter only = new OnlyExt("html");
-
-        File[] s = fl.listFiles(only);
-        for (int i = 0; i < s.length; i++) {
-            System.out.println(s[i]);
-        }
     }
 }
