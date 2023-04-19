@@ -1,0 +1,4 @@
+hello漢字
+print writer is here
+print writer is here
+ Hello world
