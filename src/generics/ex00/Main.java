@@ -5,8 +5,9 @@ package generics.ex00;
  */
 public class Main {
     public static void main(String[] args) {
-        Integer i = (Integer) (mult(5, 6));
-        Double i2 =  (Double) (mult(5., 6));
+ //       Integer i = (Integer) (mult(5, 6));
+ //       Double i2 =  (Double) (mult(5., 6));
+        int i2 =  (mult(5., 6)).intValue();
         System.out.println(i2);
     }
 
