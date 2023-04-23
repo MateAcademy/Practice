@@ -7,10 +7,8 @@ public class Main {
     public static void main(String[] args) {
        // A a = new A();
         A b = new B();
-
     }
 }
-
 
 class A {
     public A A(A this) {
@@ -24,5 +22,5 @@ class A {
 }
 
 class B extends A {
-    void test(){}
+    void test() {}
 }
