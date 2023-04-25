@@ -11,6 +11,7 @@ public class SimpleCopyFile {
 
         try {
             Files.copy(sourceFile.toPath(), targetFile.toPath());
+            Files.move(sourceFile.toPath(), targetFile.toPath());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
