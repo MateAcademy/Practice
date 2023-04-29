@@ -11,7 +11,7 @@ public class Main {
 //        FileInputStream fileInputStream;
 //
 //        try {
-//            fileInputStream = new FileInputStream("src/lesson03/ex01/file.txt");
+//            fileInputStream = new FileInputStream("src/lesson03/ex01/file.bin");
 //            int a;
 //            while ((a = fileInputStream.read()) != -1) {
 //                System.out.print((char) a);
@@ -28,7 +28,7 @@ public class Main {
 //        try {
 //            String str = "\n Hello world";
 //
-//            fileOutputStream = new FileOutputStream("src/lesson03/ex01/file.txt", true);
+//            fileOutputStream = new FileOutputStream("src/lesson03/ex01/file.bin", true);
 //            fileOutputStream.write(str.getBytes());
 //        } catch (FileNotFoundException e) {
 //            throw new RuntimeException(e);
@@ -38,7 +38,7 @@ public class Main {
 
 
 //        try {
-//            FileReader fileReader = new FileReader("src/lesson03/ex01/file.txt");
+//            FileReader fileReader = new FileReader("src/lesson03/ex01/file.bin");
 //            char[] ints = new char[100];
 //            fileReader.read(ints);
 //
@@ -49,7 +49,7 @@ public class Main {
 //        }
 
 
-//        File file = new File("src/lesson03/ex00/file.txt");
+//        File file = new File("src/lesson03/ex00/file.bin");
 //
 //        PrintWriter printWriter = null;
 //        try {
@@ -63,7 +63,7 @@ public class Main {
 //        String separator = File.separator;
 //
 //        try {
-//            var pathToFile = new File("src/lesson03/ex01/file.txt");
+//            var pathToFile = new File("src/lesson03/ex01/file.bin");
 //            var filreader = new FileReader(pathToFile);
 //            var bufferedReader = new BufferedReader(filreader);
 //
@@ -97,7 +97,7 @@ public class Main {
 
 //getting lists of files in a directory
         File file = new File("path_to_dir");
-        File file3 = new File("src/lesson03/ex01/file.txt");
+        File file3 = new File("src/lesson03/ex01/file.bin");
         File[] files = file.listFiles();
 
         //get parent folder:

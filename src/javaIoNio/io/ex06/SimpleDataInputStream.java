@@ -4,7 +4,7 @@ import java.io.*;
 
 public class SimpleDataInputStream {
     public static void main(String[] args) throws IOException {
-        DataOutputStream  out = new DataOutputStream(new FileOutputStream("/home/user/dev/Practice/file.txt"));
+        DataOutputStream  out = new DataOutputStream(new FileOutputStream("/home/user/dev/Practice/file.bin"));
         byte[] bytes = "hello".getBytes();
         out.write(bytes);
 //        out.writeShort(1000);
@@ -13,7 +13,7 @@ public class SimpleDataInputStream {
 //        out.writeUTF("hello world");
         out.flush();
 
-        DataInputStream in = new DataInputStream(new FileInputStream("/home/user/dev/Practice/file.txt"));
+        DataInputStream in = new DataInputStream(new FileInputStream("/home/user/dev/Practice/file.bin"));
         System.out.println(String.valueOf(in.readAllBytes()));
 //        System.out.println(in.readShort());
 //        System.out.println(in.readInt());

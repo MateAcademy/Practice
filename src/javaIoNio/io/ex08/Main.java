@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) {
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("/home/user/dev/Practice/src/io/io/ex08/file.txt")));
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("/home/user/dev/Practice/src/io/io/ex08/file.bin")));
              BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("/home/user/dev/Practice/src/io/io/ex08/file2.txt"), "Cp866"))) {
             int c;
             while ((c = br.read()) != -1) {

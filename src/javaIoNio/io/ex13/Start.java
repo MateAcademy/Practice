@@ -8,7 +8,7 @@ import java.io.IOException;
  */
 public class Start {
     public static void main(String[] args) {
-        String path = "D:\\projectsJAVA\\Practice\\src\\io\\io\\ex13\\file.txt";
+        String path = "D:\\projectsJAVA\\Practice\\src\\io\\io\\ex13\\file.bin";
         try(FileWriter fw = new FileWriter(path, true)) {
             String str = "text";
             fw.write(str);

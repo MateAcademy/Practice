@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        File f1 = new File("/home/user/dev/Practice/src/io/io/ex11/file.txt");
+        File f1 = new File("/home/user/dev/Practice/src/io/io/ex11/file.bin");
 
         BufferedReader br = new BufferedReader(new FileReader(f1));
 
