@@ -13,9 +13,9 @@ public class Start {
         //printNioFileDetails("src/javaIoNio/nio/ex07/test/test.txt");
         // readFileInfo("src/javaIoNio/nio/ex07/task.txt"); //StreamReader
         nioReadFileWithBuffer("src/javaIoNio/nio/ex07/task.txt");
-       // nioWriteWithBuffer("src/javaIoNio/nio/ex07/task2.txt");
+        // nioWriteWithBuffer("src/javaIoNio/nio/ex07/task2.txt");
         //nioWriteWithStream("src/javaIoNio/nio/ex07/task2.txt");
-       // nioReadWithStream("src/javaIoNio/nio/ex07/task2.txt");
+        // nioReadWithStream("src/javaIoNio/nio/ex07/task2.txt");
     }
 
     private static void printNioFileDetails(String fileName) throws IOException, InterruptedException {
@@ -99,6 +99,7 @@ public class Start {
             throw new RuntimeException(e);
         }
     }
+
     private static void nioReadWithStream(String fileName) {
         Path path = Paths.get(fileName);
 //        String fileName1 = path.getFileName().toString();
@@ -118,14 +119,12 @@ public class Start {
     private static void nioWriteWithStream(String fileName) {
         Path path = Paths.get(fileName);
 //        String fileName1 = path.getFileName().toString();
-//
 //        Charset charset = Charset.forName("UTF-8");
         String str = "hello сергей";
         //StandardOpenOption.APPEND -  для того что бы дописывать в файл
         try (OutputStream stream = Files.newOutputStream(path, StandardOpenOption.CREATE, StandardOpenOption.APPEND)) {
-            stream.write(str.getBytes(), 0 , str.length());
+            stream.write(str.getBytes(), 0, str.length());
             stream.flush();
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
