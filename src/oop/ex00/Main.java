@@ -7,6 +7,11 @@ public class Main {
     public static void main(String[] args) {
        // A a = new A();
         A b = new B();
+        //test(b);
+    }
+
+    private static void test (B b) {
+        b.test();
     }
 }
 
@@ -22,5 +27,11 @@ class A {
 }
 
 class B extends A {
-    void test() {}
+
+    public B() {
+    }
+
+    void test() {
+        System.out.println("test");
+    }
 }
