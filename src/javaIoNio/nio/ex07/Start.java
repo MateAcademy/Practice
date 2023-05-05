@@ -71,6 +71,7 @@ public class Start {
         }
     }
 
+    //Это простой способ чтения файла если файл маленький и его нужно прочитать
     private static void nioReadFileWithBuffer(String fileName) {
         Path path = Paths.get(fileName);
         Charset charset = Charset.forName("UTF-8");
