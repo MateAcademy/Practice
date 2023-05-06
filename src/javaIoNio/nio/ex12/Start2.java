@@ -14,17 +14,29 @@ import static java.nio.file.StandardOpenOption.WRITE;
  */
 public class Start2 {
     public static void main(String[] args) {
-
+        writeWithRandomAccess("src/javaIoNio/nio/ex12/book.txt");
     }
 
     private static void writeWithRandomAccess(String fileName) {
-        ByteBuffer mark = ByteBuffer.wrap("Marker AREA".getBytes());
+        ByteBuffer mark = ByteBuffer.wrap("Marker AREA\n".getBytes());
 
         ByteBuffer buffer = ByteBuffer.allocate(10);
 
         Path path = Paths.get(fileName);
 
         try (FileChannel openFile = FileChannel.open(path, WRITE, READ)) {
+            int numBytes = 0;
+            while (buffer.hasRemaining() && numBytes != -1) {
+                numBytes = openFile.read(buffer);
+            }
+            openFile.position(0);
+            openFile.write(mark);
+
+            long size = openFile.size();
+
+            openFile.position(size/2);
+            mark.rewind();
+            openFile.write(mark);
 
 
         } catch (Exception e) {
