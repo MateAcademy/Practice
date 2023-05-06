@@ -29,7 +29,7 @@ public class Start {
                     System.out.print((char) bf.get());
                 }
                 bf.clear();
-                channel.read(bf);
+                read = channel.read(bf);
 
             }
 
