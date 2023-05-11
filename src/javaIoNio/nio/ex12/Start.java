@@ -54,7 +54,6 @@ public class Start {
             buffer.mark();
             buffer.reset();
 
-
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {

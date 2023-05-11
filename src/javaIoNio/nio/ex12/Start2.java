@@ -11,6 +11,10 @@ import static java.nio.file.StandardOpenOption.WRITE;
 
 /**
  * @author Serhii Klunniy
+ * 1-hello ==========
+ * 2-hello ==========
+ * 4-hello ==========
+ * 5-hello ==========
  */
 public class Start2 {
     public static void main(String[] args) {
@@ -36,6 +40,10 @@ public class Start2 {
 
             openFile.position(size/2);
             mark.rewind();
+            openFile.write(mark);
+
+            openFile.position(size-1);
+            mark.rewind();  //устанавливаем позицию буффера на начало
             openFile.write(mark);
 
 
