@@ -27,6 +27,12 @@ public class Start3 {
 //                System.out.println(rootDir);
 //            }
 
+            DirectoryStream<Path> paths1 = Files.newDirectoryStream(dir);
+            for (Path p : paths1) {
+                System.out.println(p);
+            }
+            paths1.close();
+
             DirectoryStream.Filter<Path> filter = new DirectoryStream.Filter<Path>() {
                 @Override
                 public boolean accept(Path entry) throws IOException {
