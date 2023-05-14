@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.attribute.*;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -42,10 +43,20 @@ public class FileAttribute {
 //        System.out.println("Creation time " + dosFileAttributes.creationTime());
 //        System.out.println("Is hidden " + dosFileAttributes.isHidden());
 
-        Set<PosixFilePermission> posixFilePermissions = PosixFilePermissions.fromString("rwx------");
-        java.nio.file.attribute.FileAttribute<Set<PosixFilePermission>> setFileAttribute = PosixFilePermissions.asFileAttribute(posixFilePermissions);
-        Files.createFile(Paths.get("file1.txt"), setFileAttribute);
+//        Set<PosixFilePermission> posixFilePermissions = PosixFilePermissions.fromString("rwx------");
+//        java.nio.file.attribute.FileAttribute<Set<PosixFilePermission>> setFileAttribute = PosixFilePermissions.asFileAttribute(posixFilePermissions);
+//        Files.createFile(Paths.get("file1.txt"), setFileAttribute);
 
+        UserPrincipal user = path.getFileSystem().getUserPrincipalLookupService().lookupPrincipalByName("Sergey");
+        AclFileAttributeView view = Files.getFileAttributeView(path, AclFileAttributeView.class);
+        AclEntry acl = AclEntry.newBuilder()
+                .setType(AclEntryType.ALLOW)
+                .setPrincipal(user)
+                .setPermissions(AclEntryPermission.READ_ATTRIBUTES, AclEntryPermission.READ_DATA)
+                .build();
+        List<AclEntry> acl1 = view.getAcl();
+        acl1.add(acl);
+        view.setAcl(acl1);
 
     }
 
