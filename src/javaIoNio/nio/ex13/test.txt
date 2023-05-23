@@ -1,0 +1,8 @@
+File Attribute View:
+
+1. BasicFileAttributeView - все операционные системы
+2. DosFileAttributeView - windows
+3. PosixFileAttributeView - no windows, read hart, ubunty
+4. AclFileAttributeView - позволяет управлять правами доступа к файлам и папкам на платформе windows
+5. UserDefinedFileAttributeView
+6. FileOwnerAttributeView
