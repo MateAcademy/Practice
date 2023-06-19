@@ -3,6 +3,7 @@ package hillel.lesson23.socket;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
@@ -25,10 +26,14 @@ public class MultithreadingServer {
                         System.out.println(word);
                     }
 
+                    OutputStream outputStream = accept.getOutputStream();
+
                     Scanner scanner = new Scanner(System.in);
                     String message = scanner.nextLine();
 
-                    accept.getOutputStream().write(message.);
+                    outputStream.write(message.getBytes(message));
+                    outputStream.flush();
+
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
