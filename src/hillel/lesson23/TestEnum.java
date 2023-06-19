@@ -11,7 +11,7 @@ public class TestEnum {
         //hashCode()
         //getClass()
         //ordinal
-        String ver = color.;
+        String ver = color.name;
 //        System.out.println(ver);
 
         switch (color) {
@@ -26,5 +26,8 @@ public class TestEnum {
 
         System.out.println(Color.GREEN);
 
+//        Color.GREEN.name = "black";
+
+        System.out.println(Color.GREEN);
     }
 }

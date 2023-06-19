@@ -2,14 +2,18 @@ package hillel.lesson23;
 
 //это класскоторый содержит себя же
 //каждый элемент енама это уже созданный обьект
+//не содержит в себе состояний.
+//переопределять   toString()
+//никаких геттеров, сеттеров
+//енам не содержит в себе изменяемых состояний
 public enum Color {
-    RED, GREEN("this is green"), YELLOW("yellow");
+    RED("this is read"), GREEN("this is green"), YELLOW("yellow");
 
-    public String name;
+    public final String name;
 
-    Color() {
-        name = "red";
-    }
+//    Color() {
+//        name = "red";
+//    }
 
     Color(String name) {
         this.name = name;
@@ -24,4 +28,9 @@ public enum Color {
 //                "name='" + name + '\'' +
 //                '}';
 //    }
+
+    @Override
+    public String toString() {
+        return this.name;
+    }
 }
