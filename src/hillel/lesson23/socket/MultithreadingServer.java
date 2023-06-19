@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class MultithreadingServer {
 
@@ -23,6 +24,11 @@ public class MultithreadingServer {
                     while ((word = bufferedReader.readLine()) != null) {
                         System.out.println(word);
                     }
+
+                    Scanner scanner = new Scanner(System.in);
+                    String message = scanner.nextLine();
+
+                    accept.getOutputStream().write(message.);
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
