@@ -7,8 +7,14 @@ public enum Color {
 
     public String name;
 
-    Color(){}
-    Color (String name) {
+    Color() {
+        name = "red";
+    }
+
+    Color(String name) {
         this.name = name;
     }
+
+    public String greetings(String name) {
+        return "hello " + name;}
 }
