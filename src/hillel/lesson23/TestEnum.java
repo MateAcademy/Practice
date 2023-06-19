@@ -15,7 +15,7 @@ public class TestEnum {
             default -> System.out.println("default");
         }
 
-        System.out.println(Color.GREEN.greetings("name"));
+        System.out.println(Color.GREEN.greetings("Alex"));
 
     }
 }
