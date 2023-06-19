@@ -17,4 +17,11 @@ public enum Color {
 
     public String greetings(String name) {
         return "hello " + name;}
+
+//    @Override
+//    public String toString() {
+//        return "Color{" +
+//                "name='" + name + '\'' +
+//                '}';
+//    }
 }

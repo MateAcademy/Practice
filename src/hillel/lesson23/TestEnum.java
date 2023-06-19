@@ -5,8 +5,14 @@ public class TestEnum {
         //System.out.println("hello");
 
         Color color = Color.RED;
-        String ver = color.name;
-        System.out.println(ver);
+        //name
+        //toString()
+        //compareTo()
+        //hashCode()
+        //getClass()
+        //ordinal
+        String ver = color.;
+//        System.out.println(ver);
 
         switch (color) {
             case RED -> System.out.println(color.name);
@@ -15,7 +21,10 @@ public class TestEnum {
             default -> System.out.println("default");
         }
 
-        System.out.println(Color.GREEN.greetings("Alex"));
+        String alex = Color.GREEN.greetings("Alex");
+        System.out.println(alex);
+
+        System.out.println(Color.GREEN);
 
     }
 }
