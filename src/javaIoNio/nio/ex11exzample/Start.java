@@ -30,10 +30,7 @@ public class Start {
                 }
                 bf.clear();
                 read = channel.read(bf);
-
             }
-
-
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
