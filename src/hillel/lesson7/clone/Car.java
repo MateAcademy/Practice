@@ -5,7 +5,7 @@ import lombok.experimental.FieldDefaults;
 
 @Data
 @Builder
-//@NoArgsConstructor
+@NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Car implements Cloneable {
