@@ -1,4 +1,4 @@
-package hillel.lesson23;
+package hillel_shaytan.lesson23;
 
 //это класскоторый содержит себя же
 //каждый элемент енама это уже созданный обьект

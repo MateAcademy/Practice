@@ -1,4 +1,4 @@
-package hillel.lesson23;
+package hillel_shaytan.lesson23;
 
 public class TestEnum {
     public static void main(String[] args) {

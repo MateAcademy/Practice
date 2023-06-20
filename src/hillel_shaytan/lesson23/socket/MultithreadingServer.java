@@ -1,4 +1,4 @@
-package hillel.lesson23.socket;
+package hillel_shaytan.lesson23.socket;
 
 import java.io.BufferedReader;
 import java.io.IOException;
