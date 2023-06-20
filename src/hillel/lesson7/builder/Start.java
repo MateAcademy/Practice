@@ -1,4 +1,6 @@
-package hillel.lesson7;
+package hillel.lesson7.builder;
+
+import hillel.lesson7.builder.Car;
 
 //У нас задача создать машину? Этих значений 40 или 30, их нужно вычислить, есть такой паттерн Билдер для создания обьекта
 public class Start {

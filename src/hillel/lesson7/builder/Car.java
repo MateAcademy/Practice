@@ -1,4 +1,4 @@
-package hillel.lesson7;
+package hillel.lesson7.builder;
 
 public class Car {
     private String name;
