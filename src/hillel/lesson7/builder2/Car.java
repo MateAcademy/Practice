@@ -13,6 +13,7 @@ public class Car {
     String name;
     String color;
     int maxSpeed;
+    public String id;
 
 //    private Car(Builder builder) {
 //        this.name = builder.name;
