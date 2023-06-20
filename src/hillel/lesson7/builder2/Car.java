@@ -1,19 +1,18 @@
 package hillel.lesson7.builder2;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Car {
-    private String name;
-    private String color;
-    private int maxSpeed;
+
+    String name;
+    String color;
+    int maxSpeed;
 
 //    private Car(Builder builder) {
 //        this.name = builder.name;
