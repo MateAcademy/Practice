@@ -8,33 +8,20 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
+/**
+ * Задача напишите exit что бы коннекшн закрылся?
+ */
 public class Servet {
     public static void main(String[] args) {
-        try(ServerSocket serverSocket = new ServerSocket(8085)) {
+        try (ServerSocket serverSocket = new ServerSocket(8085)) {
 
-            Socket accept = serverSocket.accept();
+            Socket accept = serverSocket.accept(); // сервер жди пока к тебе кто то подконнектится :) Socket - это обьект который позволяет настроить коммуникацию
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(accept.getInputStream()));
+            String word;
 
-            new Thread(()-> {
-                String word;
-                while (true) {
-                    try {
-                        if (!((word = bufferedReader.readLine()) != null)) break;
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-                    System.out.println(word);
-                }
-            }).start();
-
-            OutputStream outputStream = accept.getOutputStream();
-
-            Scanner scanner = new Scanner(System.in);
-            String message = scanner.nextLine();
-
-            outputStream.write(message.getBytes(message));
-            outputStream.flush();
-
+            while ((word = bufferedReader.readLine()) != null) {
+                System.out.println(word);
+            }
         } catch (IOException e) {
             System.out.println("connection is broken");
         }
