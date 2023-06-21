@@ -10,6 +10,7 @@ public class Client {
 
         try (Socket socket = new Socket("localhost", 8085)) {
             PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);
+
             new Thread(() -> {
                 while (true) {
                     printWriter.println("hello my socket");

@@ -7,17 +7,27 @@ import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Semaphore;
 
 public class MultithreadingServer {
 
     public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = new ServerSocket(8085);
 
+        ExecutorService tp = Executors.newFixedThreadPool(2);
+        Semaphore semaphore = new Semaphore(2);
         while (true) {
 
+            try {
+                semaphore.acquire();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             Socket accept = serverSocket.accept(); // на этом этапе я жду подключения
 
-            new Thread(() -> {
+            tp.execute(() -> {
                 try {
                     BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(accept.getInputStream()));
                     String word;
@@ -26,18 +36,12 @@ public class MultithreadingServer {
                         System.out.println(word);
                     }
 
-                    OutputStream outputStream = accept.getOutputStream();
-
-                    Scanner scanner = new Scanner(System.in);
-                    String message = scanner.nextLine();
-
-                    outputStream.write(message.getBytes(message));
-                    outputStream.flush();
-
                 } catch (IOException e) {
                     throw new RuntimeException(e);
+                } finally {
+                    semaphore.release();
                 }
-            }).start();
+            });
 
         }
     }
