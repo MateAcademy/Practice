@@ -20,7 +20,6 @@ public class Servet {
                 System.out.println(word);
             }
 
-
         } catch (IOException e) {
             System.out.println("connection is broken");
         }
