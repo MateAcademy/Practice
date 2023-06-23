@@ -25,6 +25,7 @@ public class MultithreadingServer {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+
             Socket accept = serverSocket.accept(); // на этом этапе я жду подключения
 
             tp.execute(() -> {

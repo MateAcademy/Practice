@@ -8,6 +8,7 @@ import java.net.SocketException;
 public class UDPServer {
 
     public static void main(String[] args) throws IOException {
+
         DatagramSocket datagramSocket = new DatagramSocket(3000);
         DatagramPacket datagramPacket = new DatagramPacket(new byte[256], 256);
         while (true) {
