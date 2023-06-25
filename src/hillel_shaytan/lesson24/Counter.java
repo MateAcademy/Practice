@@ -7,10 +7,10 @@ import java.util.Random;
  */
 public class Counter {
 
-    public int days;
-    public int half;
+    public volatile int days;
+    public volatile int half;
 
-    public void mix() {
+    public synchronized void mix() {
         half++;
         try {
             Thread.sleep(new Random().nextInt(20));
